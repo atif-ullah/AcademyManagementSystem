@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CC9BC3D2-845A-4680-8EB6-253EDC6DC322}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AcademyManagementSystem</RootNamespace>
+    <AssemblyName>AcademyManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\BlTblAdmission.cs" />
+    <Compile Include="BL\BlTblCourse.cs" />
+    <Compile Include="BL\BlTblExpense.cs" />
+    <Compile Include="BL\BlTblExpenseHead.cs" />
+    <Compile Include="BL\BlTblClass.cs" />
+    <Compile Include="BL\BlTblFee.cs" />
+    <Compile Include="BL\BlTblSalary.cs" />
+    <Compile Include="BL\BlTblStudent.cs" />
+    <Compile Include="BL\BlTblTeacher.cs" />
+    <Compile Include="BL\BlTblUser.cs" />
+    <Compile Include="CustomClasses\ClsEmailOtp.cs" />
+    <Compile Include="DAL\DataAccess.cs" />
+    <Compile Include="FrmAddmision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddmision.Designer.cs">
+      <DependentUpon>FrmAddmision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHome.Designer.cs">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUserRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUserRegistration.Designer.cs">
+      <DependentUpon>FrmUserRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChangePassword.Designer.cs">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClass.Designer.cs">
+      <DependentUpon>FrmClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCourse.Designer.cs">
+      <DependentUpon>FrmCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmExpense.Designer.cs">
+      <DependentUpon>FrmExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmExpenseHead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmExpenseHead.Designer.cs">
+      <DependentUpon>FrmExpenseHead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFee.Designer.cs">
+      <DependentUpon>FrmFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForgetPassword.Designer.cs">
+      <DependentUpon>FrmForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGenerateOtp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGenerateOtp.Designer.cs">
+      <DependentUpon>FrmGenerateOtp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSalary.Designer.cs">
+      <DependentUpon>FrmSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStudent.Designer.cs">
+      <DependentUpon>FrmStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTeacher.Designer.cs">
+      <DependentUpon>FrmTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAddmision.resx">
+      <DependentUpon>FrmAddmision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHome.resx">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUserRegistration.resx">
+      <DependentUpon>FrmUserRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChangePassword.resx">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmClass.resx">
+      <DependentUpon>FrmClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCourse.resx">
+      <DependentUpon>FrmCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmExpense.resx">
+      <DependentUpon>FrmExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmExpenseHead.resx">
+      <DependentUpon>FrmExpenseHead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFee.resx">
+      <DependentUpon>FrmFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForgetPassword.resx">
+      <DependentUpon>FrmForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGenerateOtp.resx">
+      <DependentUpon>FrmGenerateOtp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSalary.resx">
+      <DependentUpon>FrmSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStudent.resx">
+      <DependentUpon>FrmStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTeacher.resx">
+      <DependentUpon>FrmTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\AcademyManagementSystem.FrmAddmision.resources" />
+    <EmbeddedResource Include="obj\Debug\AcademyManagementSystem.FrmChangePassword.resources" />
+    <EmbeddedResource Include="obj\Debug\AcademyManagementSystem.FrmClass.resources" />
+    <EmbeddedResource Include="obj\Debug\AcademyManagementSystem.FrmCourse.resources" />
+    <EmbeddedResource Include="obj\Debug\AcademyManagementSystem.FrmExpense.resources" />
+    <EmbeddedResource Include="obj\Debug\AcademyManagementSystem.FrmExpenseHead.resources" />
+    <EmbeddedResource Include="obj\Debug\AcademyManagementSystem.FrmFee.resources" />
+    <EmbeddedResource Include="obj\Debug\AcademyManagementSystem.FrmForgetPassword.resources" />
+    <EmbeddedResource Include="obj\Debug\AcademyManagementSystem.FrmGenerateOtp.resources" />
+    <EmbeddedResource Include="obj\Debug\AcademyManagementSystem.FrmHome.resources" />
+    <EmbeddedResource Include="obj\Debug\AcademyManagementSystem.FrmLogin.resources" />
+    <EmbeddedResource Include="obj\Debug\AcademyManagementSystem.FrmSalary.resources" />
+    <EmbeddedResource Include="obj\Debug\AcademyManagementSystem.FrmStudent.resources" />
+    <EmbeddedResource Include="obj\Debug\AcademyManagementSystem.FrmTeacher.resources" />
+    <EmbeddedResource Include="obj\Debug\AcademyManagementSystem.FrmUserRegistration.resources" />
+    <EmbeddedResource Include="obj\Debug\AcademyManagementSystem.Properties.Resources.resources" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="bin\Debug\AcademyManagementSystem.exe.config" />
+    <None Include="obj\Debug\AcademyManagementSystem.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\AcademyManagementSystem.csproj.CopyComplete" />
+    <None Include="obj\Debug\AcademyManagementSystem.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\AcademyManagementSystem.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\AcademyManagementSystem.exe" />
+    <Content Include="bin\Debug\AcademyManagementSystem.pdb" />
+    <Content Include="bin\Debug\Guna.UI2.dll" />
+    <Content Include="obj\Debug\AcademyManagementSystem.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\AcademyManagementSystem.exe" />
+    <Content Include="obj\Debug\AcademyManagementSystem.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <None Include="Resources\logo21.jpg" />
+    <None Include="Resources\courses1.png" />
+    <None Include="Resources\tsttsttss.jpg" />
+    <None Include="Resources\std.jpg" />
+    <None Include="Resources\stdds.jpg" />
+    <None Include="Resources\teachers.jpg" />
+    <None Include="Resources\21187011.png" />
+    <None Include="Resources\attachment_1029441541.png" />
+    <None Include="Resources\login.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\courses.png" />
+    <None Include="Resources\best-student-with-book-logo-education-logo-template-design-concept-student-progress-and-success-in-learning-free-vector1.jpg" />
+    <None Include="Resources\attachment_102944154.png" />
+    <None Include="Resources\best-student-with-book-logo-education-logo-template-design-concept-student-progress-and-success-in-learning-free-vector.jpg" />
+    <None Include="Resources\logo2.jpg" />
+    <None Include="Resources\student-graduation-uniform.jpg" />
+    <None Include="Resources\hat logo.png" />
+    <None Include="Resources\icons8_close_480px.png" />
+    <None Include="Resources\151-1511296_power-button-sign-out-png-icon-transparent-png.png" />
+    <None Include="Resources\payment-icon-16.jpg" />
+    <None Include="Resources\1019607.png" />
+    <None Include="Resources\istockphoto-1179398744-170667a.jpg" />
+    <None Include="Resources\avatar1.png" />
+    <None Include="Resources\2118701.png" />
+    <None Include="Resources\1005506.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
